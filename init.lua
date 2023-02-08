@@ -1,4 +1,5 @@
 return {
+    "base",
     "numerals",
     "money",
     "strings",
