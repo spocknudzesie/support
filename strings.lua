@@ -109,3 +109,14 @@ function string:degnome()
     return res
 end
 
+
+function string.join(table, junction)
+    local res = ""
+    
+    for i,item in pairs(table) do
+      res = res..item..junction
+    end
+    
+    res = string.gsub(res, junction.."$", "")
+    return res
+end
