@@ -33,12 +33,12 @@ function scripts.numerals:subLiczebnik(text, no_sub)
 
     if word:match("nascie$") or word:match("nastu$") then
         number = number + 10
-    elseif word:match("dziescia$") or word:match("dziesci$") or word:match("dzies%a*t") or word:match("dziesiec.") and number ~= 10 then
+    elseif word:match("dziescia$") or word:match("dziesci$") or word:match("dziesiat") or word:match("dziesiec.") and number ~= 10 then
         number = number*10
     end
     
-    if number >= 20 then
-        local units 
+    if number >= 20 and #words > 1 then
+        local units
         units = self:subLiczebnik(words[2], true)
         if units > 0 then
             number = number + units
