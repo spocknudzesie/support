@@ -4,5 +4,7 @@ return {
     "money",
     "strings",
     "tables",
-    "lang"
+    "lang",
+    'meta',
+    'timers'
 }
